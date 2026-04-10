@@ -4,1141 +4,814 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gabriel Juárez · Tech Lead</title>
+  
+  <!-- SEO Básico -->
+  <title>Meyisoft | Consultoría de Software y Sistemas POS en Mérida</title>
+  <meta name="description" content="Expertos en ingeniería de software para retail, banca y salud en Mérida. Especialistas en Puntos de Venta (POS), apps móviles offline-first e integraciones con SAP. Tecnología de grado enterprise para tu negocio.">
+  <meta name="keywords" content="Software Mérida, Punto de Venta Mérida, POS, Desarrollo de Apps, Flutter, Spring Boot, SAP Integration, Consultoría IT, Retail Software">
+  <meta name="author" content="Gabriel Juárez - Meyisoft">
+  <link rel="canonical" href="https://gjuarez-ago.github.io/perfil/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gjuarez-ago.github.io/perfil/">
+  <meta property="og:title" content="Meyisoft | Consultoría de Software de Misión Crítica">
+  <meta property="og:description" content="Llevamos la tecnología de los grandes (Soriana, Santander, Walmart) a tu negocio. POS, Apps Offline e Integraciones.">
+  <meta property="og:image" content="https://gjuarez-ago.github.io/perfil/logo_meyisoft.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gjuarez-ago.github.io/perfil/">
+  <meta property="twitter:title" content="Meyisoft | Consultoría de Software de Misión Crítica">
+  <meta property="twitter:description" content="Software robusto y escalable para retail, banca e industria. Expertos en POS y soluciones offline.">
+  <meta property="twitter:image" content="https://gjuarez-ago.github.io/perfil/logo_meyisoft.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="logo_meyisoft.png" type="image/png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,600&family=Epilogue:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estructura de Datos JSON-LD para Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Meyisoft POS & Solutions",
+    "operatingSystem": "Web, iOS, Android",
+    "applicationCategory": "BusinessApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "MXN"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Gabriel Juárez"
+    },
+    "description": "Sistemas de punto de venta y soluciones de software empresarial para el sector retail y alimenticio."
+  }
+  </script>
+
   <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0
+    :root {
+      --morado: #3d1040;
+      --morado-sec: #5D2A5B;
+      --oro: #D4AF37;
+      --crema: #F2F1E8;
+      --texto: #2A2A2A;
+      --whatsapp: #25D366;
+      --blanco: #ffffff;
     }
 
-    :root {
-      --bg: #F6F4EF;
-      --bg2: #EDEAE2;
-      --surface: #FFFFFF;
-      --border: #D9D5CB;
-      --border2: #C8C3B7;
-      --ink: #1A1916;
-      --ink2: #4A473F;
-      --muted: #8A8679;
-      --green: #2A4A3E;
-      --green-m: #3D6B5A;
-      --green-l: #EBF0EE;
-      --coral: #C4543A;
-      --coral-l: #FAF0ED;
-      --tag-bg: #E4EBE8;
-      --tag-text: #2A4A3E;
-      --nav-h: 60px;
-      --r: 12px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
     }
 
     body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'Epilogue', sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      overflow-x: hidden
+      background: var(--crema);
+      color: var(--texto);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
     }
 
-    ::selection {
-      background: var(--green);
-      color: #fff
-    }
-
-    ::-webkit-scrollbar {
-      width: 3px
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--bg)
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--border2);
-      border-radius: 2px
-    }
-
+    /* ─── NAV ─── */
     nav {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 100;
-      height: var(--nav-h);
+      z-index: 200;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
-      background: rgba(246, 244, 239, 0.93);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
+      padding: 1rem 3.5rem;
+      background: rgba(242, 241, 232, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      transition: box-shadow .3s, padding .3s;
+    }
+
+    nav.scrolled {
+      box-shadow: 0 4px 32px rgba(61, 16, 64, .12);
+      padding: .8rem 3.5rem;
     }
 
     .nav-logo {
-      font-family: 'Fraunces', serif;
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: -0.01em
-    }
-
-    .nav-logo em {
-      color: var(--green);
-      font-style: italic
-    }
-
-    .nav-links {
       display: flex;
-      gap: 2rem;
-      list-style: none
-    }
-
-    .nav-links a {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--muted);
+      align-items: center;
+      gap: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--morado);
       text-decoration: none;
-      transition: color .2s;
-      letter-spacing: 0.01em
     }
 
-    .nav-links a:hover {
-      color: var(--ink)
+    .nav-logo img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+
+    .nav-logo span {
+      color: var(--oro);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: var(--texto);
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+
+    nav ul a:hover {
+      color: var(--morado);
     }
 
     .nav-cta {
-      background: var(--green) !important;
+      background: var(--oro);
       color: #fff !important;
-      padding: 0.4rem 1rem;
-      border-radius: 7px;
-      font-size: 0.83rem !important;
-      transition: background .2s, transform .15s !important
+      padding: .5rem 1.4rem;
+      border-radius: 100px;
+      font-weight: 700 !important;
+      transition: background .2s, transform .2s, box-shadow .2s !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, .3);
     }
 
     .nav-cta:hover {
-      background: var(--green-m) !important;
-      transform: translateY(-1px)
+      background: #b8932b !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, .4);
     }
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 4px
-    }
-
-    .hamburger span {
-      display: block;
-      width: 22px;
-      height: 1.5px;
-      background: var(--ink);
-      border-radius: 2px;
-      transition: .3s
-    }
-
-    section {
-      padding: clamp(3.5rem, 7vw, 5rem) clamp(1.5rem, 5vw, 4rem);
-      max-width: 1080px;
-      margin: 0 auto
-    }
-
-    #home {
+    /* ─── HERO ─── */
+    #hero {
       min-height: 100vh;
-      padding-top: calc(var(--nav-h) + 3.5rem);
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 9rem 2rem 5rem;
       position: relative;
       overflow: hidden;
-      text-align: center;
+    }
+
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: blur(1px);
+      transform: scale(1.05);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(135deg, rgba(61, 16, 64, 0.88) 0%, rgba(26, 8, 32, 0.96) 100%);
     }
 
     .hero-content {
       position: relative;
-      z-index: 1;
-      max-width: 800px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      z-index: 2;
+      max-width: 900px;
     }
 
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 1.75rem
-    }
-
-    .hero-eyebrow::before,
-    .hero-eyebrow::after {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--green)
-    }
-
-    .dot-live {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--coral);
-      animation: pulse 2.2s ease-in-out infinite;
-      flex-shrink: 0
-    }
-
-    @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1)
-      }
-
-      50% {
-        opacity: .4;
-        transform: scale(.65)
-      }
-    }
-
-    h1.hero-title {
-      font-family: 'Fraunces', serif;
+      gap: .6rem;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .2);
+      backdrop-filter: blur(4px);
+      border-radius: 100px;
+      padding: .4rem 1.2rem;
+      font-size: .76rem;
       font-weight: 700;
-      font-size: clamp(2.8rem, 7.5vw, 5.8rem);
-      line-height: 1.0;
-      letter-spacing: -0.03em;
-      color: var(--ink);
-      margin-bottom: 1.5rem
+      color: #fff;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      animation: fadeUp .6s ease both;
     }
 
-    h1.hero-title .accent {
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--oro);
+      border-radius: 50%;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 1.4rem;
+      animation: fadeUp .7s .1s ease both;
+    }
+
+    .hero-title em {
       font-style: italic;
-      color: var(--green)
+      color: var(--oro);
     }
 
-    .hero-desc {
-      max-width: 600px;
-      font-size: 1.1rem;
-      color: var(--ink2);
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-      margin-left: auto;
-      margin-right: auto;
+    .hero-sub {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 620px;
+      margin: 0 auto 2.8rem;
+      font-weight: 300;
+      animation: fadeUp .7s .2s ease both;
     }
 
     .hero-actions {
       display: flex;
-      gap: 1.25rem;
+      gap: 1.2rem;
       flex-wrap: wrap;
       justify-content: center;
+      animation: fadeUp .7s .3s ease both;
     }
 
-    .btn-p {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--green);
+    .btn-primary {
+      background: var(--oro);
       color: #fff;
-      padding: 0.7rem 1.6rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'Epilogue', sans-serif;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: background .2s, transform .15s
-    }
-
-    .btn-p:hover {
-      background: var(--green-m);
-      transform: translateY(-2px)
-    }
-
-    .btn-s {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1.5px solid var(--border2);
-      color: var(--ink);
-      padding: 0.7rem 1.6rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      font-family: 'Epilogue', sans-serif;
-      text-decoration: none;
-      transition: border-color .2s, background .2s, transform .15s
-    }
-
-    .btn-s:hover {
-      border-color: var(--green);
-      background: var(--green-l);
-      transform: translateY(-2px)
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: clamp(2rem, 5vw, 4rem);
-      margin-top: 3rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid var(--border);
-      justify-content: center;
-      width: 100%;
-    }
-
-    .stat-num {
-      font-family: 'Fraunces', serif;
-      font-size: 2.4rem;
+      padding: 1rem 2.4rem;
+      border-radius: 100px;
+      font-size: .95rem;
       font-weight: 700;
-      color: var(--ink);
-      line-height: 1;
-      letter-spacing: -0.02em
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 6px 32px rgba(212, 175, 55, .3);
     }
 
-    .stat-num em {
-      color: var(--coral);
-      font-style: normal
-    }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-top: 5px;
-      letter-spacing: 0.01em
-    }
-
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 1rem
-    }
-
-    .section-label::before {
-      content: '';
-      display: block;
-      width: 16px;
-      height: 1px;
-      background: var(--green)
-    }
-
-    h2.section-title {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-style: italic;
-      font-size: clamp(1.9rem, 3.8vw, 2.7rem);
-      line-height: 1.1;
-      letter-spacing: -0.025em;
-      color: var(--ink);
-      margin-bottom: 2.25rem
-    }
-
-    h2.section-title span {
-      color: var(--green);
-      font-style: normal
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start
-    }
-
-    .about-text p {
-      color: var(--ink2);
-      font-size: 0.97rem;
-      line-height: 1.85;
-      margin-bottom: 1.1rem
-    }
-
-    .about-text p strong {
-      color: var(--ink);
-      font-weight: 600
-    }
-
-    .about-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      padding: 1.75rem
-    }
-
-    .about-card h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 1.25rem;
-      color: var(--ink)
-    }
-
-    .info-row {
-      display: flex;
-      gap: 0.75rem;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.88rem
-    }
-
-    .info-row:last-child {
-      border: none
-    }
-
-    .info-row .label {
-      color: var(--muted);
-      min-width: 88px;
-      flex-shrink: 0;
-      font-size: 0.82rem
-    }
-
-    .info-row .value {
-      color: var(--ink2)
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-      gap: 1.1rem
-    }
-
-    .skill-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      padding: 1.4rem;
-      transition: border-color .25s, transform .25s, box-shadow .25s
-    }
-
-    .skill-card:hover {
-      border-color: var(--green);
+    .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 24px rgba(42, 74, 62, 0.08)
+      box-shadow: 0 12px 40px rgba(212, 175, 55, .45);
     }
 
-    .skill-icon {
-      width: 38px;
-      height: 38px;
-      background: var(--green-l);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 0.9rem;
-      font-size: 1.1rem
-    }
-
-    .skill-card h4 {
-      font-family: 'Fraunces', serif;
-      font-size: 0.92rem;
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      color: #fff;
+      padding: 1rem 2.4rem;
+      border-radius: 100px;
+      font-size: .95rem;
       font-weight: 600;
-      margin-bottom: 0.7rem;
-      color: var(--ink)
+      text-decoration: none;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      transition: border-color .2s, background .2s;
     }
 
-    .tags {
+    .btn-ghost:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* ─── STATS BAR ─── */
+    .stats-bar {
+      background: var(--morado-sec);
+      padding: 3rem 4rem;
       display: flex;
+      justify-content: space-around;
       flex-wrap: wrap;
-      gap: 5px
-    }
-
-    .tag {
-      background: var(--tag-bg);
-      color: var(--tag-text);
-      font-size: 0.73rem;
-      font-weight: 600;
-      padding: 3px 9px;
-      border-radius: 5px;
-      letter-spacing: 0.02em
-    }
-
-    .timeline {
+      gap: 2rem;
       position: relative;
-      padding-left: 1.75rem
+      z-index: 5;
+      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 12px;
-      bottom: 0;
-      width: 1px;
-      background: var(--border2)
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 2.75rem;
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .5s ease, transform .5s ease
-    }
-
-    .timeline-item.visible {
-      opacity: 1;
-      transform: translateY(0)
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: -2.2rem;
-      top: 6px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px var(--green)
-    }
-
-    .tl-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 0.5rem;
-      margin-bottom: 0.3rem
-    }
-
-    .tl-title {
-      font-family: 'Fraunces', serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--ink)
-    }
-
-    .tl-company {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--green)
-    }
-
-    .tl-period {
-      font-size: 0.77rem;
-      color: var(--muted);
-      margin-left: auto;
-      background: var(--bg2);
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-weight: 500
-    }
-
-    .tl-body {
-      color: var(--ink2);
-      font-size: 0.9rem;
-      line-height: 1.72;
-      margin-top: 0.45rem
-    }
-
-    .tl-body ul {
-      padding-left: 1rem;
-      margin-top: 0.35rem
-    }
-
-    .tl-body ul li {
-      margin-bottom: 0.25rem
-    }
-
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
-      gap: 0.85rem
-    }
-
-    .stack-item {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.1rem 0.6rem;
+    .stat-item {
       text-align: center;
-      font-size: 0.79rem;
-      color: var(--muted);
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      transition: border-color .2s, color .2s, transform .2s, background .2s
     }
 
-    .stack-item:hover {
-      border-color: var(--green);
-      color: var(--green);
-      background: var(--green-l);
-      transform: translateY(-2px)
-    }
-
-    .stack-icon {
-      font-size: 1.35rem;
+    .stat-item .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--oro);
       display: block;
-      margin-bottom: 5px
+      line-height: 1;
     }
 
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 4rem;
-      align-items: start
+    .stat-item .desc {
+      font-size: .85rem;
+      color: rgba(255, 255, 255, .7);
+      margin-top: .6rem;
+      font-weight: 400;
+      letter-spacing: .02em;
     }
 
-    .contact-info p {
-      color: var(--ink2);
-      font-size: 0.97rem;
-      margin-bottom: 2rem;
-      line-height: 1.8
+    /* ─── SECCIÓN COMÚN ─── */
+    .section-eyebrow {
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--oro);
+      margin-bottom: .8rem;
+      display: block;
     }
 
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 900;
+      color: var(--morado);
+      line-height: 1.15;
+      margin-bottom: 1rem;
     }
 
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--ink2);
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: color .2s
+    .section-sub {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.7;
+      font-weight: 300;
     }
 
-    .contact-link:hover {
-      color: var(--green)
+    /* ─── NOSOTROS ─── */
+    #nosotros {
+      padding: 6rem 4rem;
+      background: #fff;
     }
 
-    .cl-icon {
-      width: 34px;
-      height: 34px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 0.85rem
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.9rem
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem
-    }
-
-    .form-group label {
-      font-size: 0.75rem;
-      color: var(--muted);
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase
-    }
-
-    .form-group input,
-    .form-group textarea {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      color: var(--ink);
-      font-family: 'Epilogue', sans-serif;
-      font-size: 0.92rem;
-      padding: 0.7rem 0.9rem;
-      outline: none;
-      resize: vertical;
-      transition: border-color .2s
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: var(--green)
-    }
-
-    .form-group textarea {
-      min-height: 120px
-    }
-
-    .form-row {
+    .nosotros-layout {
+      max-width: 1100px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.9rem
+      gap: 5rem;
+      align-items: center;
     }
 
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 1.75rem clamp(1.5rem, 5vw, 4rem);
+    .nosotros-content p {
+      font-size: .97rem;
+      color: #666;
+      line-height: 1.78;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.8rem;
+    }
+
+    .val-card {
+      background: var(--crema);
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      border-left: 3px solid var(--oro);
+      transition: transform .2s;
+    }
+
+    .val-card:hover {
+      transform: translateX(5px);
+    }
+
+    .val-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--morado);
+      margin-bottom: .3rem;
+    }
+
+    .val-card p {
+      font-size: .78rem;
+      color: #777;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    /* ─── VENTAJA COMPETITIVA ─── */
+    #ventaja {
+      padding: 6rem 4rem;
+      background: var(--crema);
+    }
+
+    .ventaja-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .ventaja-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 4rem;
+    }
+
+    .bridge-grid {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      gap: 0;
+      align-items: stretch;
+      margin-bottom: 4rem;
+    }
+
+    .bridge-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bridge-col-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--oro);
+      margin-bottom: .4rem;
+    }
+
+    .origin-card {
+      background: #fff;
+      border: 1px solid rgba(61, 16, 64, .1);
+      border-radius: 14px;
+      padding: 1rem 1.4rem;
+      transition: transform .2s;
+    }
+
+    .origin-card:hover {
+      transform: translateX(4px);
+    }
+
+    .origin-card .oc-name {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--morado);
+    }
+
+    .origin-card .oc-tag {
+      font-size: .76rem;
+      color: #999;
+      font-weight: 300;
+      margin-top: 2px;
+    }
+
+    .arrows-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2rem 0;
+    }
+
+    .arr {
+      width: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      max-width: 1080px;
-      margin: 0 auto
     }
 
-    footer p {
-      font-size: 0.8rem;
-      color: var(--muted)
+    .arr-line {
+      flex: 1;
+      height: 1px;
+      background: rgba(61, 16, 64, .25);
     }
 
-    .fade-up {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity .55s ease, transform .55s ease
+    .arr-head {
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 8px solid rgba(61, 16, 64, .35);
     }
 
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0)
+    .benefit-card {
+      background: #fff;
+      border: 1px solid rgba(61, 16, 64, .08);
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
     }
 
-    .consulting-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--morado), var(--oro));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s;
     }
 
-    .consulting-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      padding: 1.75rem;
-      transition: border-color .25s, transform .25s, box-shadow .25s;
+    .benefit-card:hover {
+      transform: translateX(-4px);
+      box-shadow: 0 8px 32px rgba(61, 16, 64, .08);
     }
 
-    .consulting-card:hover {
-      border-color: var(--green);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 24px rgba(42, 74, 62, 0.08);
-    }
-
-    .consulting-card h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.15rem;
+    .bc-title {
+      font-size: .92rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--ink);
+      color: var(--morado);
+      margin-bottom: .35rem;
     }
 
-    .consult-duration {
+    .bc-desc {
+      font-size: .8rem;
+      color: #666;
+      line-height: 1.55;
+      font-weight: 300;
+    }
+
+    .bc-tag {
       display: inline-block;
-      font-size: 0.75rem;
+      font-size: .68rem;
       font-weight: 600;
-      color: var(--green);
-      background: var(--green-l);
-      padding: 2px 10px;
-      border-radius: 4px;
-      margin-bottom: 1.25rem;
-      letter-spacing: 0.02em;
+      padding: .18rem .75rem;
+      border-radius: 100px;
+      margin-top: .6rem;
     }
 
-    .consult-body {
-      color: var(--ink2);
-      font-size: 0.92rem;
-      line-height: 1.75;
+    .tag-pos { background: rgba(61, 16, 64, .08); color: var(--morado); }
+    .tag-mobile { background: rgba(212, 175, 55, .15); color: #8b6914; }
+    .tag-arch { background: rgba(93, 42, 91, .12); color: var(--morado-sec); }
+    .tag-erp { background: rgba(61, 16, 64, .06); color: var(--morado); }
+
+    /* ─── SERVICIOS ─── */
+    #servicios {
+      padding: 6rem 4rem;
+      background: #fff;
     }
 
-    @media(max-width:768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: var(--nav-h);
-        left: 0;
-        right: 0;
-        background: var(--bg);
-        padding: 1.5rem;
-        gap: 1.25rem;
-        border-bottom: 1px solid var(--border)
-      }
-
-      .nav-links.open {
-        display: flex
-      }
-
-      .hamburger {
-        display: flex
-      }
-
-      .about-grid,
-      .contact-wrap {
-        grid-template-columns: 1fr;
-        gap: 2.5rem
-      }
-
-      .hero-stats {
-        gap: 1.75rem
-      }
-
-      .form-row {
-        grid-template-columns: 1fr
-      }
-
-      .tl-period {
-        margin-left: 0;
-        width: 100%
-      }
+    .producto-label-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
     }
+
+    .producto-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      background: var(--morado);
+      color: #fff;
+      padding: .5rem 1.4rem;
+      border-radius: 100px;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .producto-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--oro);
+      border-radius: 50%;
+    }
+
+    .producto-divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(61, 16, 64, .2), transparent);
+    }
+
+    .servicio-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 5rem;
+      padding-bottom: 5rem;
+      border-bottom: 1px solid rgba(61, 16, 64, .07);
+    }
+
+    .servicio-block.reverse .servicio-visual { order: -1; }
+
+    .serv-copy .section-title { font-size: clamp(1.6rem, 2.5vw, 2.2rem); }
+    .serv-copy p { font-size: .97rem; color: #666; line-height: 1.75; font-weight: 300; margin-bottom: 1.2rem; }
+
+    .serv-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.5rem; }
+    .serv-tag { font-size: .72rem; font-weight: 500; color: var(--morado); background: rgba(61, 16, 64, .07); padding: .22rem .75rem; border-radius: 100px; }
+
+    /* ─── CTA ─── */
+    #cta {
+      padding: 7rem 4rem;
+      background: linear-gradient(135deg, var(--morado) 0%, var(--morado-sec) 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); color: #fff; font-weight: 900; margin-bottom: 1rem; position: relative; z-index: 1; }
+    #cta p { color: rgba(255, 255, 255, .6); font-size: 1.05rem; margin-bottom: 2.8rem; position: relative; z-index: 1; }
+
+    .cta-cards { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .cta-product-card { background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .15); border-radius: 20px; padding: 2rem 2.4rem; max-width: 280px; text-align: left; transition: all .2s; }
+    .cta-product-card:hover { transform: translateY(-3px); border-color: var(--oro); background: rgba(255, 255, 255, .12); }
+    .btn-gold { display: inline-block; background: var(--oro); color: #fff; padding: .75rem 1.8rem; border-radius: 100px; font-size: .88rem; font-weight: 700; text-decoration: none; transition: all .2s; }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(212, 175, 55, .4); }
+
+    /* Visual cards */
+    .serv-visual-card { background: var(--morado); border-radius: 24px; padding: 2.4rem; position: relative; overflow: hidden; box-shadow: 0 20px 50px rgba(61, 16, 64, .15); }
+    .sv-stat { background: rgba(255, 255, 255, .07); border-radius: 12px; padding: .9rem 1.1rem; flex: 1; border: 1px solid rgba(255, 255, 255, .08); }
+    .sv-v { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--oro); display: block; }
+    .sv-l { font-size: .7rem; color: rgba(255, 255, 255, .5); font-weight: 300; }
+    .sv-item { display: flex; align-items: center; justify-content: space-between; padding: .65rem .9rem; background: rgba(255, 255, 255, .05); border-radius: 10px; margin-bottom: .45rem; border: 1px solid rgba(255, 255, 255, .06); color: #fff; font-size: 0.8rem; }
+    .sv-badge { font-size: .62rem; font-weight: 700; padding: .12rem .55rem; border-radius: 100px; }
+    .sv-badge.green { background: rgba(37, 211, 102, .15); color: #25D366; }
+
+    /* ─── WHATSAPP ─── */
+    .wa-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 300; width: 56px; height: 56px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37, 211, 102, .4); transition: transform .2s; animation: pulse-wa 3s infinite; }
+    @keyframes pulse-wa { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+    /* ─── RESPONSIVE ─── */
+    @media(max-width:960px) {
+      nav { padding: 1rem 1.5rem; }
+      nav ul { display: none; }
+      #hero { padding: 9rem 1.5rem 5rem; }
+      .nosotros-layout, .bridge-grid, .servicio-block { grid-template-columns: 1fr; gap: 2.5rem; }
+      .bridge-grid { display: flex; flex-direction: column; }
+      .arrows-col { display: none; }
+      #nosotros, #ventaja, #servicios, #cta { padding: 4rem 1.5rem; }
+    }
+
+    .reveal { opacity: 0; transform: translateY(26px); transition: all .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 
 <body>
 
-  <nav>
-    <a href="#home" class="nav-logo">Gabriel <em>Juárez</em></a>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experiencia</a></li>
-      <li><a href="#consulting">Consultorías</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#contact" class="nav-cta">Contacto</a></li>
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="logo_meyisoft.png" alt="Meyisoft Logo">
+      Meyi<span>Soft</span>
+    </a>
+    <ul>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#ventaja">Ventaja</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#cta" class="nav-cta">Cotizar</a></li>
     </ul>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </nav>
 
-  <section id="home">
-
-    <div class="hero-content fade-up visible">
-      <div class="hero-eyebrow">
-        <div class="dot-live"></div>Disponible para proyectos
-      </div>
-      <h1 class="hero-title">Tech Lead<br><span class="accent">&amp; Consultor</span><br>de Software</h1>
-      <p class="hero-desc">Arquitecto y desarrollador con +6 años liderando proyectos de alto impacto en banca, retail y
-        salud. Java · Spring Boot · Angular · Flutter. Fundador de <strong>Meyisoft</strong>.</p>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Ingeniería de Software Elite</div>
+      <h1 class="hero-title">Traemos la tecnología de los grandes a <em>tu negocio</em></h1>
+      <p class="hero-sub">Especialistas en sistemas de misión crítica, retail y movilidad. Desde un MVP ágil hasta una arquitectura enterprise robusta.</p>
       <div class="hero-actions">
-        <a href="#experience" class="btn-p">Ver experiencia ↓</a>
-        <a href="#contact" class="btn-s">Trabajemos juntos</a>
+        <a href="#servicios" class="btn-primary">Nuestros Servicios</a>
+        <a href="#ventaja" class="btn-ghost">¿Por qué nosotros?</a>
       </div>
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num">6<em>+</em></div>
-          <div class="stat-label">Años de experiencia</div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item"><span class="num">15+</span><div class="desc">Años de experiencia<br>acumulada</div></div>
+    <div class="stat-item"><span class="num">100%</span><div class="desc">Foco en resultados<br>y escalabilidad</div></div>
+    <div class="stat-item"><span class="num">RT</span><div class="desc">Sistemas en tiempo real<br>y alta disponibilidad</div></div>
+  </div>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros">
+    <div class="nosotros-layout">
+      <div class="nosotros-content reveal">
+        <span class="section-eyebrow">Quiénes Somos</span>
+        <h2 class="section-title">Ingeniería mexicana con estándares globales</h2>
+        <p>En Meyisoft no solo escribimos código; resolvemos problemas de negocio. Nuestra trayectoria incluye el desarrollo de sistemas para marcas que confías todos los días, como Soriana, Walmart, Santander y BBVA.</p>
+        <div class="values-grid">
+          <div class="val-card"><h4>🏗️ Arquitectura Sólida</h4><p>Construimos sobre bases que permiten a tu negocio crecer sin límites tecnológicos.</p></div>
+          <div class="val-card"><h4>📱 Movilidad Real</h4><p>Apps que funcionan donde otros fallan, diseñadas para la operación real en campo.</p></div>
         </div>
-        <div>
-          <div class="stat-num">30<em>+</em></div>
-          <div class="stat-label">Proyectos entregados</div>
-        </div>
-        <div>
-          <div class="stat-num">8<em>+</em></div>
-          <div class="stat-label">Sectores cubiertos</div>
+      </div>
+      <div class="reveal">
+        <div class="vision-card" style="background:var(--morado); padding:3rem; border-radius:24px; color:#fff;">
+          <h3 style="font-family:'Playfair Display',serif; font-size:1.8rem; margin-bottom:1rem;">Nuestra Promesa</h3>
+          <p style="font-weight:300; line-height:1.7; opacity:0.8;">Entregar tecnología que antes solo estaba al alcance de los presupuestos corporativos más grandes, adaptada a las necesidades y agilidad de tu empresa.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <div class="section-label">Sobre mí</div>
-    <h2 class="section-title fade-up">Construyo productos<br><span>de inicio a fin</span></h2>
-    <div class="about-grid">
-      <div class="about-text fade-up">
-        <p>Soy <strong>Gabriel Juárez</strong>, Tech Lead y consultor de software con sede en Mérida. No solo codifico —
-          diseño arquitecturas, tomo decisiones técnicas, estimo proyectos y acompaño equipos desde el primer sprint
-          hasta el deploy en producción.</p>
-        <p>He trabajado para <strong>Soriana, Walmart, Chedraui, Nestlé, P&G, Santander, AT&T y el IMSS</strong>,
-          liderando soluciones que impactan a miles de usuarios en casi todo México.</p>
-        <p>Soy pragmático y optimista — me importa resolver el problema real, no el problema bonito. Aprendo rápido,
-          cambio de marcha sin drama y me energiza trabajar con personas que se toman en serio lo que hacen.</p>
-        <p>Actualmente ofrezco consultoría a través de <strong>Meyisoft</strong>, una consultora especializada en software
-          para el sector de alimentos.</p>
+  <!-- VENTAJA -->
+  <section id="ventaja">
+    <div class="ventaja-wrapper">
+      <div class="ventaja-header reveal">
+        <span class="section-eyebrow">Nuestra Autoridad</span>
+        <h2 class="section-title">Experiencia que respalda cada línea de código</h2>
       </div>
-      <div class="about-card fade-up">
-        <h3>Información de contacto</h3>
-        <div class="info-row"><span class="label">Nombre</span><span class="value">Gabriel Juárez de la Cruz</span>
+      <div class="bridge-grid">
+        <div class="bridge-col reveal">
+          <div class="origin-card"><div class="oc-name">Retail & POS</div><div class="oc-tag">Soriana, Walmart, Chedraui</div></div>
+          <div class="origin-card"><div class="oc-name">Banca & Finanzas</div><div class="oc-tag">Santander, BBVA</div></div>
         </div>
-        <div class="info-row"><span class="label">Ubicación</span><span class="value">Mérida, Yucatán, México</span>
+        <div class="arrows-col"><span>→</span><span>→</span></div>
+        <div class="bridge-col reveal">
+          <div class="benefit-card">
+            <div class="bc-title">Para tu empresa:</div>
+            <div class="bc-desc">Sistemas POS robustos, arquitecturas cloud-native e integraciones ERP (SAP) que conectan tu operación de inicio a fin.</div>
+          </div>
         </div>
-        <div class="info-row"><span class="label">WhatsApp</span><span class="value">985 202 6169</span></div>
-        <div class="info-row"><span class="label">Email</span><span class="value">gajuarezdelac.dev@gmail.com</span>
-        </div>
-
-        <div class="info-row"><span class="label">Inglés</span><span class="value">Intermedio</span></div>
-        <div style="margin-top:1.4rem"><a href="#contact" class="btn-p"
-            style="font-size:0.86rem;padding:0.55rem 1.1rem">Contáctame →</a></div>
       </div>
     </div>
   </section>
 
-  <section id="skills">
-    <div class="section-label">Habilidades</div>
-    <h2 class="section-title fade-up">Stack <span>técnico</span></h2>
-    <div class="skills-grid">
-      <div class="skill-card fade-up">
-        <div class="skill-icon">⚙️</div>
-        <h4>Backend</h4>
-        <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Spring
-            Cloud</span><span class="tag">Spring Security</span><span class="tag">Microservicios</span><span
-            class="tag">Kafka</span><span class="tag">REST APIs</span><span class="tag">JUnit 5</span><span
-            class="tag">Mockito</span></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-icon">🌐</div>
-        <h4>Frontend Web</h4>
-        <div class="tags"><span class="tag">Angular 10–15</span><span class="tag">TypeScript</span><span
-            class="tag">RxJS</span><span class="tag">NgRx</span><span class="tag">React</span><span
-            class="tag">JavaScript</span><span class="tag">ng-zorro</span></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-icon">📱</div>
-        <h4>Mobile</h4>
-        <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC</span><span
-            class="tag">Dart</span><span class="tag">Offline-first</span><span class="tag">Bluetooth BLE</span><span
-            class="tag">Android</span></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-icon">🗄️</div>
-        <h4>Bases de datos</h4>
-        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Oracle
-            11g</span><span class="tag">SQL Server</span><span class="tag">AWS RDS</span></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-icon">☁️</div>
-        <h4>Cloud & DevOps</h4>
-        <div class="tags"><span class="tag">AWS S3/EC2/Lambda</span><span class="tag">OpenShift</span><span
-            class="tag">Jenkins</span><span class="tag">Azure DevOps</span><span class="tag">CI/CD</span><span
-            class="tag">Linux</span><span class="tag">Nginx</span></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-icon">🏛️</div>
-        <h4>Arquitectura & Liderazgo</h4>
-        <div class="tags"><span class="tag">Tech Lead</span><span class="tag">Arquitectura</span><span
-            class="tag">Scrum</span><span class="tag">Estimación</span><span class="tag">Code Review</span><span
-            class="tag">MVP</span><span class="tag">SonarQube</span></div>
-      </div>
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="producto-label-bar reveal">
+      <div class="producto-badge"><div class="dot"></div>Líneas de Especialidad</div>
     </div>
-  </section>
-
-  <section id="experience">
-    <div class="section-label">Experiencia</div>
-    <h2 class="section-title fade-up">Trayectoria <span>profesional</span></h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="tl-header"><span class="tl-title">Desarrollador Sr.</span><span class="tl-company">Softtek ·
-            IMSS</span><span class="tl-period">Nov 2025 – Feb 2026</span></div>
-        <div class="tl-body">
-          <ul>
-            <li>Módulos críticos del sistema nacional de urgencias médicas, ~25,000 profesionales de salud.</li>
-            <li>Spring Boot + Angular con foco en UX para usuarios no técnicos.</li>
-            <li>RCA y resolución de incidencias de alto impacto a nivel nacional.</li>
-          </ul>
+    <div class="servicio-block reveal">
+      <div class="serv-copy">
+        <h2 class="section-title">POS & Retail Engineering</h2>
+        <p>Llevamos la inteligencia de inventarios y ventas de los grandes retailers a tu cadena de tiendas o restaurante.</p>
+        <div class="serv-tags">
+          <span class="serv-tag">Inventario RT</span><span class="serv-tag">CFDI 4.0</span><span class="serv-tag">Multi-sucursal</span>
+        </div>
+        <a href="https://wa.me/529852026163" class="btn-primary-dark">Hablar con un experto</a>
+      </div>
+      <div class="servicio-visual">
+        <div class="serv-visual-card">
+          <div class="sv-item"><span>Caja Principal</span><span class="sv-badge green">ONLINE</span></div>
+          <div class="sv-item"><span>Sincronización SAP</span><span class="sv-badge green">SYNC OK</span></div>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="tl-header"><span class="tl-title">Lead Software Developer</span><span class="tl-company">AGO
-            Consultores · Retail</span><span class="tl-period">Ago 2022 – Nov 2025</span></div>
-        <div class="tl-body">
-          <ul>
-            <li>Liderazgo técnico para Soriana, Walmart, Chedraui, Nestlé y P&G.</li>
-            <li>Dirección de equipos, code reviews, mentoring y estándares de ingeniería.</li>
-            <li>Migración de sistemas legados a Spring Boot, Angular y Flutter.</li>
-            <li>Diseño de arquitecturas, estimaciones y creación de MVPs.</li>
-          </ul>
-        </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <h2>¿Listo para el siguiente nivel?</h2>
+    <p>Cuéntanos tu reto técnico hoy mismo y recibe una propuesta profesional diseñada para escalar.</p>
+    <div class="cta-cards">
+      <div class="cta-product-card">
+        <h3>Proyectos Rápidos</h3>
+        <p>Soluciones ágiles para necesidades inmediatas.</p>
+        <a href="https://wa.me/529852026163" class="btn-gold">Consultar</a>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="tl-header"><span class="tl-title">Backend Developer Sr.</span><span class="tl-company">I+D
-            Consultoría · Chapur</span><span class="tl-period">Abr 2024 – Jun 2025</span></div>
-        <div class="tl-body">Plataforma de crédito y app móvil de Chapur. Migración legacy, diseño de arquitectura y
-          planeación con stakeholders.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="tl-header"><span class="tl-title">Desarrollador Sr.</span><span class="tl-company">IDS Comercial ·
-            Santander</span><span class="tl-period">Ago 2023 – Abr 2024</span></div>
-        <div class="tl-body">Microservicios REST para productos financieros: verificación de pagos, CFDI y seguros.
-          Deploy en OpenShift bajo CI/CD.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="tl-header"><span class="tl-title">Desarrollador de Software</span><span class="tl-company">NTT DATA
-            · Santander</span><span class="tl-period">Nov 2021 – Ago 2022</span></div>
-        <div class="tl-body">Arquitectura y desarrollo full stack del portal CAU. Angular 13 + Spring Boot +
-          microservicios. JUnit 5, Mockito, SonarQube, Veracode.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="tl-header"><span class="tl-title">Desarrollador de Software</span><span class="tl-company">NTT DATA
-            · AT&T</span><span class="tl-period">Jul – Nov 2021</span></div>
-        <div class="tl-body">Arquitectura del sistema de recargas y distribución de pagos. Configuración de OSB MX para
-          nuevos canales.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="tl-header"><span class="tl-title">Full Stack Developer</span><span
-            class="tl-company">Macropay</span><span class="tl-period">Jul 2020 – Jul 2021</span></div>
-        <div class="tl-body">Gestión de proveedores integrado con SAP ERP (CFDI 3.0/4.0). Sistema predictivo de apertura
-          de tiendas con equipo de BI.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="tl-header"><span class="tl-title">Full Stack Developer</span><span class="tl-company">Cotemar S.A.
-            de C.V.</span><span class="tl-period">Jun 2018 – Jul 2020</span></div>
-        <div class="tl-body">Control de calidad para operaciones offshore y app móvil en Flutter (BLoC). Liderazgo del
-          equipo móvil y optimización de consultas.</div>
+      <div class="cta-product-card">
+        <h3>Consultoría Senior</h3>
+        <p>Arquitectura y desarrollo de sistemas complejos.</p>
+        <a href="https://wa.me/529852026163" class="btn-gold">Cotizar</a>
       </div>
     </div>
   </section>
 
-  <section id="consulting">
-    <div class="section-label">Consultoría</div>
-    <h2 class="section-title fade-up">Proyectos <span>especiales</span></h2>
-    <div class="consulting-grid">
-      <div class="consulting-card fade-up">
-        <span class="consult-duration">2 meses</span>
-        <h3>Accenture México</h3>
-        <p class="consult-body">Desarrollo de microservicios REST e implementación de nuevas funcionalidades para
-          productos financieros de BBVA España, contribuyendo a la evolución de sus plataformas bancarias.</p>
-      </div>
-      <div class="consulting-card fade-up">
-        <span class="consult-duration">2 meses</span>
-        <h3>www.ahio.com.mx</h3>
-        <p class="consult-body">Desarrollo de microservicios REST y funcionalidades para el sistema de servicios de la
-          CDMX. Reclutamiento y asignación de grúas según ubicación para optimizar tiempos de respuesta.</p>
-      </div>
-      <div class="consulting-card fade-up">
-        <span class="consult-duration">1 mes</span>
-        <h3>sales-hub.com</h3>
-        <p class="consult-body">Desarrollo de microservicios REST y funcionalidades para CRM: mejoras de UX,
-          optimización
-          de procesos de ventas y actualizaciones modulares.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="stack">
-    <div class="section-label">Herramientas</div>
-    <h2 class="section-title fade-up">Tecnologías <span>que uso</span></h2>
-    <div class="stack-grid">
-      <div class="stack-item fade-up"><span class="stack-icon">☕</span>Java</div>
-      <div class="stack-item fade-up"><span class="stack-icon">🍃</span>Spring</div>
-      <div class="stack-item fade-up"><span class="stack-icon">🅰️</span>Angular</div>
-      <div class="stack-item fade-up"><span class="stack-icon">📱</span>Flutter</div>
-      <div class="stack-item fade-up"><span class="stack-icon">🐘</span>PostgreSQL</div>
-      <div class="stack-item fade-up"><span class="stack-icon">☁️</span>AWS</div>
-      <div class="stack-item fade-up"><span class="stack-icon">🐳</span>Docker</div>
-      <div class="stack-item fade-up"><span class="stack-icon">🔴</span>OpenShift</div>
-      <div class="stack-item fade-up"><span class="stack-icon">🔁</span>Jenkins</div>
-      <div class="stack-item fade-up"><span class="stack-icon">📨</span>Kafka</div>
-      <div class="stack-item fade-up"><span class="stack-icon">🔍</span>SonarQube</div>
-      <div class="stack-item fade-up"><span class="stack-icon">🧪</span>JUnit</div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="section-label">Contacto</div>
-    <h2 class="section-title fade-up">¿Tienes un proyecto?<br><span>Hablemos</span></h2>
-    <div class="contact-wrap">
-      <div class="contact-info fade-up">
-        <p>Disponible para consultoría técnica, liderazgo de proyectos, desarrollo a medida y auditorías de
-          arquitectura. Respondo en menos de 24 horas.</p>
-        <div class="contact-links">
-          <a href="mailto:gajuarezdelac.dev@gmail.com" class="contact-link"><span
-              class="cl-icon">✉️</span>gajuarezdelac.dev@gmail.com</a>
-          <a href="https://wa.me/529852026169" class="contact-link" target="_blank"><span class="cl-icon">💬</span>985
-            202 6169 (WhatsApp)</a>
-          <a href="#" class="contact-link"><span class="cl-icon">📍</span>Mérida, Yucatán, México</a>
-
-        </div>
-      </div>
-      <form class="contact-form fade-up" id="contact-form" onsubmit="handleSubmit(event)">
-        <div class="form-row">
-          <div class="form-group"><label>Nombre</label><input type="text" id="form-name" placeholder="Tu nombre"
-              required></div>
-          <div class="form-group"><label>Email</label><input type="email" id="form-email" placeholder="tu@email.com"
-              required></div>
-        </div>
-        <div class="form-group"><label>Proyecto / Asunto</label><input type="text" id="form-subject"
-            placeholder="¿En qué puedo ayudarte?"></div>
-        <div class="form-group"><label>Mensaje</label><textarea id="form-msg-content"
-            placeholder="Cuéntame más sobre tu proyecto..."></textarea></div>
-        <button type="submit" class="btn-p" style="align-self:flex-start" id="submit-btn">Enviar mensaje ↗</button>
-        <p id="form-msg" style="font-size:0.84rem;color:var(--muted);display:none;margin-top:0.5rem"></p>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Gabriel Juárez · Meyisoft</p>
-    <p>Mérida, Yucatán · Disponible para consultoría</p>
+  <!-- FOOTER -->
+  <footer style="background:#1a0820; color:#fff; padding:4rem 2rem; text-align:center;">
+    <p>© 2025 Meyisoft. Ingeniería de Software en Mérida, Yucatán.</p>
+    <p style="font-size:0.8rem; opacity:0.5; margin-top:1rem;">Diseñado para el rendimiento y la conversión.</p>
   </footer>
 
+  <!-- WA FLOAT -->
+  <a href="https://wa.me/529852026163" class="wa-float" target="_blank">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
   <script>
-    const ham = document.getElementById('hamburger');
-    const navL = document.getElementById('nav-links');
-    ham.addEventListener('click', () => navL.classList.toggle('open'));
-    navL.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navL.classList.remove('open')));
-
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-up, .timeline-item').forEach((el, i) => {
-      el.style.transitionDelay = (i % 7) * 0.065 + 's';
-      obs.observe(el);
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
     });
 
-    function handleSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('form-name').value;
-      const email = document.getElementById('form-email').value;
-      const subject = document.getElementById('form-subject').value;
-      const message = document.getElementById('form-msg-content').value;
-
-      const btn = document.getElementById('submit-btn');
-      const infoMsg = document.getElementById('form-msg');
-
-      btn.textContent = 'Redirigiendo...';
-      btn.style.opacity = '0.7';
-
-      // Construcción del mensaje de WhatsApp
-      const text = `Hola Gabriel, soy *${name}* (${email}).\n\n*Asunto:* ${subject || 'Contacto desde web'}\n\n*Mensaje:* ${message}`;
-      const waUrl = `https://wa.me/529852026169?text=${encodeURIComponent(text)}`;
-
-      setTimeout(() => {
-        window.open(waUrl, '_blank');
-        btn.textContent = '¡Enviado! ✓';
-        btn.style.background = '#2A6B48';
-        btn.style.opacity = '1';
-        infoMsg.textContent = 'Se ha abierto WhatsApp para enviar tu mensaje.';
-        infoMsg.style.display = 'block';
-        e.target.reset();
-      }, 800);
-    }
-
-    const secs = document.querySelectorAll('section[id]');
-    const nls = document.querySelectorAll('.nav-links a');
-    window.addEventListener('scroll', () => {
-      let cur = '';
-      secs.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
-      nls.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--ink)' : ''; });
-    }, { passive: true });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
 
